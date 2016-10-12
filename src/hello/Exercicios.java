@@ -3,7 +3,7 @@ package hello;
 public class Exercicios {
 
 	public static void main(String[] args) {
-		exercicio4();
+		exercicio5();
 
 	}
 
@@ -49,6 +49,10 @@ public class Exercicios {
 			resultado *= n;
 		}
 		System.out.println(resultado);
+	}
+	
+	private static void exercicio5() {
+		
 	}
 
 }
