@@ -3,7 +3,7 @@ package hello;
 public class Exercicios {
 
 	public static void main(String[] args) {
-		exercicio5();
+		exercicio6();
 
 	}
 
@@ -45,14 +45,25 @@ public class Exercicios {
 	private static void exercicio4() {
 		int fatorial = 10;
 		long resultado = 1;
-		for(int n=1;n<=fatorial;n++){
+		for(int n=1;n<=fatorial;n++) {
 			resultado *= n;
 		}
 		System.out.println(resultado);
 	}
 	
-	private static void exercicio5() {
-		
+	private static void exercicio6() {
+		int fibonacci = 9;
+		int nmu = 0;
+		int nmd = 1;
+		for(int i = 2;i<fibonacci;i++) {
+			int aux = nmd;
+			nmd += nmu;
+			nmu = aux;
+		}
+		if(fibonacci==0||fibonacci==1) {
+			System.out.println("A " + fibonacci + "-esima sequencia de Fibonacci é = " + nmu);
+		}else {
+			System.out.println("A " + fibonacci + "-esima sequencia de Fibonacci é = " + nmd);
+		}
 	}
-
 }
