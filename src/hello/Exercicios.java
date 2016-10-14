@@ -1,5 +1,8 @@
 package hello;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Exercicios {
 
 	public static void main(String[] args) {
@@ -73,11 +76,29 @@ public class Exercicios {
 	}
 	
 	private static long fibonacci(long n) {
-		if(n == 0 || n == 1)
-			return 0;
-		if(n == 2)
+		if(n < 2)
 			return 1;
-		return fibonacci(n-1) + fibonacci(n-2);
+		else
+			return fibonacci(n-1) + fibonacci(n-2);
+	}
+	
+	private static void exercicio6c() {
+		List<Integer> fib = new ArrayList<Integer>();
+		calculaFibonacci(fib,40);
+		System.out.println(fib);
+	}
+	
+	private static void calculaFibonacci(List<Integer> fib, int num) {
+		if(num > 0) {
+			if(fib.size() == 0) {
+				fib.add(0);
+			} else if(fib.size() == 1) {
+				fib.add(1);
+			} else {
+				fib.add(fib.get(fib.size() - 2) + fib.get(fib.size() - 1));
+			}
+			calculaFibonacci(fib, --num);
+		}
 	}
 	
 	private static void exercicio7() {
